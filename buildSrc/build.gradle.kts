@@ -10,7 +10,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.android.tools.build:gradle:7.4.2")
+    implementation("com.android.tools.build:gradle:7.3.0")
     implementation(gradleApi())
     implementation(localGroovy())
 }
@@ -24,8 +24,8 @@ gradlePlugin {
     }
 }
 
-kotlin {
-    jvmToolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
-    }
-}
+//kotlin {
+//    jvmToolchain {
+//        languageVersion.set(JavaLanguageVersion.of(17))
+//    }
+//}

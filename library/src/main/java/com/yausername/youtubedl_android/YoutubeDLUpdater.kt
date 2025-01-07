@@ -15,7 +15,7 @@ import java.net.URL
 
 internal object YoutubeDLUpdater {
     private const val youtubeDLStableChannelUrl =
-        "https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest"
+        "https://api.github.com/repos/InfinityLoop1308/yt-dlp/releases/latest"
     private const val youtubeDLNightlyChannelUrl =
         "https://api.github.com/repos/yt-dlp/yt-dlp-nightly-builds/releases/latest"
     private const val youtubeDLMasterChannelUrl =

@@ -22,6 +22,12 @@ class VideoFormat {
     val width = 0
     val height = 0
 
+    @JsonProperty("index_range")
+    val indexRange: IndexRange? = null
+
+    @JsonProperty("init_range")
+    val initRange: IndexRange? = null
+
     @JsonProperty("filesize")
     val fileSize: Long = 0
 
@@ -36,3 +42,9 @@ class VideoFormat {
     @JsonProperty("http_headers")
     val httpHeaders: Map<String, String>? = null
 }
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+data class IndexRange(
+    val begin: Long = 0,
+    val end: Long = 0
+)
