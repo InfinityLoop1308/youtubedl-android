@@ -116,6 +116,16 @@ object YoutubeDL {
         return videoInfo
     }
 
+    @Throws(YoutubeDLException::class)
+    fun getInfoFromJson(jsonResponse: String): VideoInfo {
+        val videoInfo: VideoInfo = try {
+            objectMapper.readValue(jsonResponse, VideoInfo::class.java)
+        } catch (e: IOException) {
+            throw YoutubeDLException("Unable to parse video information", e)
+        } ?: throw YoutubeDLException("Failed to fetch video information")
+        return videoInfo
+    }
+
     private fun ignoreErrors(request: YoutubeDLRequest, out: String): Boolean {
         return request.hasOption("--dump-json") && !out.isEmpty() && request.hasOption("--ignore-errors")
     }
