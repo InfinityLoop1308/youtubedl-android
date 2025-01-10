@@ -52,7 +52,7 @@ tasks.register<Delete>("clean") {
 }
 
 tasks.register("packagePublishedArtifacts") {
-    val librariesToPublish = listOf("common", "library", "aria2c", "ffmpeg")
+    val librariesToPublish = listOf("common", "library")
     librariesToPublish.forEach {
         dependsOn(":$it:publishReleasePublicationToMavenRepository")
     }
