@@ -51,8 +51,6 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation(project(":library"))
-    implementation(project(":ffmpeg"))
-    implementation(project(":aria2c"))
 
     implementation("androidx.appcompat:appcompat:${rootProject.extra["appCompatVer"]}")
     implementation("androidx.constraintlayout:constraintlayout:1.1.3")
