@@ -1,6 +1,5 @@
 plugins {
     `kotlin-dsl`
-    id("signing")
     id("maven-publish")
 }
 
