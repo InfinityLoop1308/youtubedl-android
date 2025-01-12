@@ -41,6 +41,12 @@ class VideoInfo {
     @JsonProperty("uploader_id")
     val uploaderId: String? = null
     val uploader: String? = null
+    @JsonProperty("channel_is_verified")
+    val channelIsVerified = false
+    @JsonProperty("channel_avatar")
+    val channelAvatar: String? = null
+    @JsonProperty("channel_follower_count")
+    val channelFollowerCount = -1
 
     @JsonProperty("player_url")
     val playerUrl: String? = null
@@ -79,4 +85,10 @@ class VideoInfo {
     @JsonProperty("manifest_url")
     val manifestUrl: String? = null
     val url: String? = null
+
+    @JsonProperty("related_items_raw")
+    val relatedItemsRaw: String? = null
+
+    @JsonProperty("contents_raw")
+    val contentsRaw: String? = null
 }
